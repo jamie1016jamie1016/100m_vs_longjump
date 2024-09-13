@@ -89,7 +89,11 @@ gender = st.sidebar.selectbox('Gender:', gender_options, index=2)
 
 min_age = int(df['Age'].min())
 max_age = int(df['Age'].max())
-age_range = st.sidebar.slider('Age Range:', min_value=min_age, max_value=max_age, value=(min_age, max_age))
+age_range = st.sidebar.slider('Age Range:',
+                                min_value=min_age,
+                                max_value=max_age,
+                                value=(min_age, max_age),
+                                step=5)
 
 regression_type = st.sidebar.selectbox('Regression Type:', ['Linear', 'Exponential', 'Logarithmic'])
 
